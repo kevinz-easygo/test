@@ -89,12 +89,12 @@ function App() {
         </div>
       </nav>
 
-      {/* Layout Container */}
+      {/* Layout Container - starts below top nav */}
       <div className="pt-16 flex">
-        {/* Sidebar */}
+        {/* Sidebar - now starts underneath top nav */}
         <div className={`${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        } lg:translate-x-0 fixed lg:static inset-y-0 left-0 z-40 w-64 bg-white shadow-lg border-r border-gray-200 transition-transform duration-300 ease-in-out lg:transition-none`}>
+        } lg:translate-x-0 fixed lg:static top-16 bottom-0 left-0 z-40 w-64 bg-white shadow-lg border-r border-gray-200 transition-transform duration-300 ease-in-out lg:transition-none`}>
           <div className="flex flex-col h-full pt-4">
             {/* Sidebar Navigation */}
             <nav className="flex-1 px-4 space-y-1">
@@ -149,7 +149,7 @@ function App() {
         {/* Overlay for mobile */}
         {sidebarOpen && (
           <div
-            className="fixed inset-0 bg-gray-600 bg-opacity-50 z-30 lg:hidden"
+            className="fixed inset-0 bg-gray-600 bg-opacity-50 z-30 lg:hidden top-16"
             onClick={() => setSidebarOpen(false)}
           ></div>
         )}
